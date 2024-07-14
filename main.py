@@ -115,20 +115,6 @@ class Q_computer():
         
 
 def main():
-    # run unit tests (make 3 different Qstates, test them with 10 calls to sample() each, as well as testing if the assertion errors come up):
-    # state = Qstate(3,[1/3**.5,1/3**.5,1/3**.5],[1,2,7])    
-    # state = Qstate(3,[1/4**.5,1/4**.5,1/4**.5,1/4**.5],[0,2,3,7])
-    # state = Qstate(3,[1/4**.5,1/4**.5,1/4**.5,1/4**.5],[0,1,3,4])
-    # state = Qstate(3,[1/4**.5,1/4**.5,1/4**.5,1/4**.5],[0,2,6,7])
-    # state = Qstate(3,[1/4**.5,1/4**.5,1/4**.5,1/4**.5],[1,2,3,4])
-
-#     for x in range(0,samples.shape[0]-1):
-#            print(f"{samples[x]:02b}")\
-    # state.Hadamard(1)
-    # assert set(state.getVals()) == set([0,2,4,6,5,7])
-    # print(state.getVals()) 
-    # print((sum(i**2 for i in state.getAmps())))
-
     computer = Q_computer(d=2, q_state="Qstate")
     computer.setGates(
           [((0,), "Hadamard"), ((0,), "Hadamard")]
@@ -148,15 +134,7 @@ def main():
     print(computer.sample(10))
 
 
-    # computer = Q_computer(d=1, q_state="Qstate")
-    # computer.setGates(
-    #       [((0,), "Hadamard"), ((0,), "Hadamard")]
-    # )
-    # computer.setState(
-    #       [1], ["00"]
-    # )
-    # print(computer.Run_Computer())
-    # print(computer.sample(10))
+
 
 
 if __name__ == "__main__":
